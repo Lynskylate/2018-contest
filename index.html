@@ -2,88 +2,117 @@
 <html>
 <head>
     <title>FrontEnd test 2048</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="utf-8">
     <style>
+        body {
+            background: #faf8ef;
+        }
+
         .container {
             height: 100%;
             display: flex;
             justify-items: center;
             padding: 20px;
         }
-        .game-box{
-            margin:0 auto;
-            width:560px;
-            height:560px;
-            background: aquamarine;
+
+        .game-box {
+            margin: 0 auto;
+            width: 560px;
+            height: 560px;
+            background: #bbada0;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
         }
-        .grid-row{
-            height:20%;
-            width:100%;
+
+        .grid-row {
+            height: 20%;
+            width: 100%;
             display: flex;
             flex-direction: row;
-            z-index:99;
+            z-index: 99;
             justify-content: space-around;
         }
-        .grid-cell{
+
+        .grid-cell {
             height: 100%;
-            width:20%;
-            line-height: 100%;
+            width: 20%;
             background: #cdc0b4;
-            z-index:101;
+            overflow: hidden;
+            z-index: 101;
             border-radius: 1em;
-            text-align: center;
         }
-        .grid-cell span{
-            display: inline-block;
-            vertical-align: middle;
-            line-height: 112px;
+
+        .grid-number {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .number-cell-2{
+
+        div[class*=number-cell-] span {
+            font-size: 38px;
+            color: white;
+        }
+
+        .number-cell-2 {
             background: #eee4da;
         }
-        .number-cell-4{
+
+        .number-cell-4 {
             background: #ede0c8;
         }
-        .number-cell-8{
+
+        .number-cell-8 {
             background: #f2b179;
         }
-        .number-cell-16{
-            background:#f59563 ;
+
+        .number-cell-16 {
+            background: #f59563;
         }
-        .number-cell-32{
+
+        .number-cell-32 {
             background: #f67c5f;
         }
-        .number-cell-64{
+
+        .number-cell-64 {
             background: #f65e3b;
         }
-        .number-cell-128{
+
+        .number-cell-128 {
             background: #edcf72;
         }
-        .number-cell-256{
+
+        .number-cell-256 {
             background: #ede65d;
         }
-        .number-cell-512{
+
+        .number-cell-512 {
             background: #a5f21c;
         }
-        .number-cell-1024{
+
+        .number-cell-1024 {
             background: #caed98;
         }
-        .number-cell-2048{
+
+        .number-cell-2048 {
             background: #edc22e;
         }
     </style>
 </head>
 <body>
+<button id="restart">重新开始</button>
+<div id="score">0</div>
 <h1>2048 Games</h1>
 <div class="container">
     <div id="game_2048" class="game-box">
         <div class="grid-row">
-            <div class="grid-cell number-cell-2"><span>2</span></div>
-            <div class="grid-cell"></div>
+            <div class="grid-cell">
+            </div>
+            <div class="grid-cell">
+            </div>
             <div class="grid-cell"></div>
             <div class="grid-cell"></div>
         </div>
@@ -108,4 +137,5 @@
     </div>
 </div>
 </body>
+<script src="dist/bundle.js"></script>
 </html>
