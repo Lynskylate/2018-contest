@@ -1,6 +1,7 @@
 # 2018年前端星计划
 
 这是星计划校招选拔的综合挑战题
+[体验网址](https://lynskylate.github.io/2018-contest/)https://lynskylate.github.io/2018-contest/
 
 ## 题目描述
 

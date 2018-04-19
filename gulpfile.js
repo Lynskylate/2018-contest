@@ -9,7 +9,7 @@ var buffer = require('vinyl-buffer');
 gulp.task('default', function () {
     return browserify({
         basedir: './src',
-        debug: true,
+        // debug: true,
         entries: ['2048.ts'],
         cache: {},
         packageCache: {}

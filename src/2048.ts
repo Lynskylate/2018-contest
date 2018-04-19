@@ -6,7 +6,6 @@ import {GameManager} from "./Game";
     if (ele == null)
         return
     manager = new GameManager(ele)
-    manager.matrix.setMatrix([[2, 0, 0, 0], [2, 0, 0, 0], [2, 0, 0, 0], [2, 0, 0, 0]])
     manager.clean()
     manager.render();
     const res_btn = document.getElementById("restart")
