@@ -201,6 +201,12 @@ export class GameManager {
     private checkfail(origin_mat: GameMatrix) {
         const mat_arry = _.cloneDeep(origin_mat.arry)
         const compare_mat = JSON.stringify(origin_mat)
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 4; j++) {
+                if (!this.matrix.getValue([i, j]))
+                    return
+            }
+        }
         this.moveDown()
         if (JSON.stringify(this.matrix) !== compare_mat) {
             this.matrix.setMatrix(mat_arry)
